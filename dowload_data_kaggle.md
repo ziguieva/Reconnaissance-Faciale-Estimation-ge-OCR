@@ -76,8 +76,3 @@ Cela doit afficher la version installée de l’outil Kaggle CLI.
 4. Télécharger les données avec `kaggle competitions download`.
 
 ```
-
----
-
-Veux-tu que je t’explique aussi comment **mettre ce fichier en avant dans le `README.md`** pour que les visiteurs le voient directement ?
-```

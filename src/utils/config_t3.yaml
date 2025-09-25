@@ -1,0 +1,24 @@
+# Configuration - Tâche 3 : OCR / Détection de fraude
+
+paths:
+  train_dir: "data/tache3/train"
+  val_dir:   "data/tache3/val"
+  test_dir:  "data/tache3/test"
+  output_models: "models/ocr_fraud/"
+  output_results: "results/ocr_fraud/"
+
+training:
+  batch_size: 16
+  epochs: 5
+  learning_rate: 0.001
+  optimizer: "adam"
+  seed: 42
+
+augmentation:
+  # active quelques petites augms utiles pour OCR
+  rotate_deg: 3
+  jitter_brightness: 0.1
+  jitter_contrast: 0.1
+  
+evaluation:
+  classes: ["normal", "forgery_1", "forgery_2", "forgery_3", "forgery_4"]

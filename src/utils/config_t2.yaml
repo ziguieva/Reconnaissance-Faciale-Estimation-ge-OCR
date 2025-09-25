@@ -1,0 +1,19 @@
+# Configuration - Tâche 2 : Estimation de l'âge
+
+paths:
+  train_dir: "data/tache2/train"
+  test_dir: "data/tache2/test"
+  output_models: "models/age_estimation/"
+  output_results: "results/age_estimation/"
+
+training:
+  batch_size: 4
+  epochs: 1
+  learning_rate: 0.001
+  optimizer: "adam"
+  seed: 42
+
+evaluation:
+  metrics:
+    - mae
+    - rmse

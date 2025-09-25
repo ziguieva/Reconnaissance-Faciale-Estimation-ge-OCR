@@ -1,0 +1,32 @@
+# Configuration - Tâche 1 : Reconnaissance Faciale
+
+paths:
+  train_dir: "data/tache1/train"
+  test_dir: "data/tache1/test"
+  output_models: "models/face_matching/"
+  output_results: "results/face_matching/"
+
+training:
+  batch_size: 16
+  epochs: 5
+  learning_rate: 0.001
+  optimizer: "adam"
+  scheduler: "step_lr"
+  step_size: 10
+  gamma: 0.1
+  seed: 42
+
+augmentation:
+  rotation_degrees: 15
+  brightness: 0.2
+  contrast: 0.2
+  horizontal_flip: true
+  blur: 1
+
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1_score
+  threshold_similarity: 0.5
